@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftKeys - Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navigation">SwiftKeys</div>
+    </nav>
+
+    <main class="container">
+        <div class="test-container">
+            <div class="timer-container">
+                <div class="timer">60</div>
+                <div class="timer-text">seconds</div>
+            </div>
+
+            <div class="metrics-container">
+                <div class="metric">
+                    <span class="metric-value" id="wpm">0</span>
+                    <span class="metric-label">WPM</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value" id="cpm">0</span>
+                    <span class="metric-label">CPM</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value" id="accuracy">100</span>
+                    <span class="metric-label">Accuracy %</span>
+                </div>
+            </div>
+
+            <div class="type-test">
+                <div class="text-display" id="textDisplay"></div>
+                <textarea 
+                    id="textInput" 
+                    class="text-input" 
+                    placeholder="Start typing here..." 
+                    autocomplete="off" 
+                    autocorrect="off" 
+                    autocapitalize="off" 
+                    spellcheck="false"
+                ></textarea>
+            </div>
+
+            <div class="controls">
+                <button id="resetButton" class="control-btn">Reset Test</button>
+                <div class="time-options">
+                    <button class="time-btn active" data-time="60">1m</button>
+                    <button class="time-btn" data-time="180">3m</button>
+                    <button class="time-btn" data-time="300">5m</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
